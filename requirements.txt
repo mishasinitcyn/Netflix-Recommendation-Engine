@@ -1,0 +1,4 @@
+pandas>=1.0.0
+# gzip
+fuzzywuzzy>=0.18.0
+python-Levenshtein>=0.12.0
