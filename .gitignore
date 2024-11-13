@@ -1,4 +1,4 @@
 /data/*
 !/data/netflix_to_imdb.json
-!/data/processed
+!/data/processed/*_25.pickle # keep the 25-threshold features because they're small enough
 /venv
