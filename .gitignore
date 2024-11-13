@@ -1,2 +1,4 @@
-/data
+/data/*
+!/data/netflix_to_imdb.json
+!/data/processed
 /venv
