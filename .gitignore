@@ -1,6 +1,12 @@
+# don't commit all the data, files are too big
 /data/*
+
+# keep the netflix to imdb id's mapping
 !/data/netflix_to_imdb.json
+
+# keep the 25-threshold features because they're small enough
 !/data/processed/
 /data/processed/*
-!/data/processed/*_25.pickle # keep the 25-threshold features because they're small enough
+!/data/processed/*_25.pickle
+
 /venv
