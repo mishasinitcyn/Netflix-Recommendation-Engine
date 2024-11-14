@@ -7,6 +7,6 @@
 # keep the 25-threshold features because they're small enough
 !/data/processed/
 /data/processed/*
-!/data/processed/*_25.pickle
+!/data/processed/*_20.pickle
 
 /venv
