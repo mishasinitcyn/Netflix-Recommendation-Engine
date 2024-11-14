@@ -1,11 +1,12 @@
 # don't commit all the data, files are too big
 /data/*
 
-# keep the netflix to imdb id's mapping
+# keep the mappings
 !/data/netflix_to_imdb.json
 !/data/top_netflix_users.json
 
-# keep the 25-threshold features because they're small enough
+
+# keep the computed features because they're small enough
 !/data/processed/
 /data/processed/*
 !/data/processed/*_20.pickle
