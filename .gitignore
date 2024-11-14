@@ -3,6 +3,7 @@
 
 # keep the netflix to imdb id's mapping
 !/data/netflix_to_imdb.json
+!/data/top_netflix_users.json
 
 # keep the 25-threshold features because they're small enough
 !/data/processed/
