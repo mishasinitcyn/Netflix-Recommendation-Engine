@@ -12,3 +12,4 @@
 !/data/processed/*_20.pickle
 
 /venv
+/.venv
