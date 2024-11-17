@@ -10,5 +10,6 @@
 !/data/processed/
 /data/processed/*
 !/data/processed/*_20.pickle
+/data/processed/user_profiles_20.pickle
 
 /venv
