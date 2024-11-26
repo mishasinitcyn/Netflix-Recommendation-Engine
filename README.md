@@ -49,6 +49,10 @@ Merged Netflix Prize ratings with IMDb data to map movies to their features (cas
 ## Classification
 Training on 100,000 ratings from 30 random users:
 
+**K Nearest Neighbors**:
+- High ratings: 65% precision, 57% recall
+- Combined: 61% F1, 72% ROC 
+
 **Logistic Regression**:
 - High ratings: 66% precision, 59% recall
 - Combined: 62% F1, 73% ROC AUC
@@ -57,6 +61,7 @@ Training on 100,000 ratings from 30 random users:
 - High ratings: 69% precision, 60% recall
 - Combined: 64% F1, 76% ROC AUC
 - Hyperparameter tuning showed minimal improvement
+- Removing the least significant 386 features, does not reduce the predictive abilities
 
 ## Feature Selection & Model Interpretation
 - Genre (Thriller, Comedy, Family) highest predictors
