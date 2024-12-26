@@ -1,9 +1,9 @@
 # Netflix Movie Recommendation System
 by *Mikhail Sinitcyn, Nicholas Zhang*
 
-This repository implements a movie recommendation system using the Netflix Prize dataset enhanced with IMDb metadata. By combining collaborative filtering with engineered user preference features, the system predicts user movie ratings with 76% ROC AUC accuracy and provides interpretable insights into viewer preferences.
-
 Full methodology and detailed findings available in [`report.pdf`](report.pdf).
+
+This repository implements a movie recommendation system using the Netflix Prize dataset enhanced with IMDb metadata. By combining collaborative filtering with engineered user preference features, the system predicts user movie ratings with 76% ROC AUC accuracy and provides interpretable insights into viewer preferences.
 
 ## Overview
 ### Performance Metrics
