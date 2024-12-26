@@ -1,9 +1,39 @@
 # Netflix Movie Recommendation System
-by *Nicholas Zhang, Mikhail Sinitcyn*
+by *Mikhail Sinitcyn, Nicholas Zhang*
 
-<!-- Analysis of Netflix Prize dataset combined with IMDb features for movie recommendation.  -->
+This repository implements a movie recommendation system using the Netflix Prize dataset enhanced with IMDb metadata. By combining collaborative filtering with engineered user preference features, the system predicts user movie ratings with 76% ROC AUC accuracy and provides interpretable insights into viewer preferences.
 
-Full methodology and detailed findings available in `Report.pdf`.
+Full methodology and detailed findings available in [`report.pdf`](report.pdf).
+
+## Overview
+### Performance Metrics
+
+- 76% ROC AUC Score with XGBoost classifier
+- 69% precision on high ratings (4-5 stars)
+- 60% recall on low ratings (1-3 stars)
+- 64% overall F1 score
+
+### Key Components
+
+1. **Feature Engineering**
+   - Mapped 10,000 movies to IMDb IDs
+   - Extracted 450 features with 20+ occurrences
+   - Engineered user preference features for top 10,000 users
+   - Created high/low rating ratios per feature
+
+2. **Model Implementation**
+   - K-Means clustering by runtime and genre
+   - DBSCAN outlier detection for unusual casting
+   - XGBoost classification with random search hyperparameter tuning
+   - LOF outlier detection for feature combinations
+
+3. **Feature Selection**
+   - Genre features (Thriller, Comedy, Family) highest predictors
+   - 1980s most highly rated decade
+   - 90-120min most preferred runtime
+   - Removed 386 low-impact features without performance degradation
+
+
 
 ## Data Preprocessing
 Merged Netflix Prize ratings with IMDb data to map movies to their features (cast, composers, directors, producers, genre, release year). Removed post-2005 films and TV shows. Mapped 10,000 movies to IMDb IDs to extract features, keeping only those with 20+ entries (450 features). Removed Country (noise from multiple release countries) and isAdult (only 20/9000 movies). Created user preference features for top 10,000 users as high(4-5) and low(1-3) rating ratios per feature.
@@ -82,12 +112,12 @@ For complete methodology and detailed findings, refer to `Report.pdf`.
 
 
 
-# Setup
-## Environment
+## Setup
+### Environment
 - Create a virtual environment: `python3 -m venv venv`
 - Activate the virtual environment: `source venv/bin/activate`
 - Install the required libraries: `pip3 install -r requirements.txt`
 
-## Data
+### Data
 - Download the [Netflix Prize Dataset](https://academictorrents.com/details/9b13183dc4d60676b773c9e2cd6de5e5542cee9a) and place all contents into `/data/netflix_prize`
 - Download the [IMDB Datasets](https://datasets.imdbws.com/) and place all contents (7 gz files) into `/data/imdb`
